@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+
+html, body, #averent-landing {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    overflow: hidden;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    background-color: #191919;
+}
+
+.landing-page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-family: 'Encode Sans', sans-serif;
+    color: #ededed;
+}
+
+.landing-page-slideshow {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    z-index: 1;
+}
+
+.landing-page-slideshow-image {
+    width: 100%;
+    height: 100%;
+}
+
+.landing-page-slideshow-image {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.landing-page-contents, .landing-page-contents-logo-container, .landing-page-contents-main, .landing-page-contents-main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page-contents {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    padding: 2rem;
+    max-width: 60%;
+    min-width: 360px;
+    max-height: 80vh;
+    text-align: center;
+    overflow: auto;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.landing-page-contents-logo-container {
+    margin-bottom: 0.5rem;
+}
+
+.landing-page-contents-slogan {
+    font-family: 'Russo One', sans-serif; 
+    font-size: 1.54rem;
+    margin-top: 0.4rem;
+    color: white;
+}
+
+.landing-page-contents-main-coming-soon {
+    font-family: 'Russo One', sans-serif; 
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    color: #ffa736;
+}
+
+.landing-page-contents-main-section {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.landing-page-contents-main-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 550;
+    width: 100%;
+}
+
+.landing-page-contents-main-horizontal-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: inherit;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    margin: 0.5rem 0 1rem;
+}
+
+.landing-page-contents-main-subheading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffa736;
+    margin-top: 0.5rem;
+    width: 150px;
+}
+
+.landing-page-contents-main-text {
+    margin-top: 0.5rem;
+}
+
+.landing-page-contents-main-contact-heading-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    width: 150px;
+}
+
+.landing-page-contents-main-contact-heading-option:hover .landing-page-contents-main-contact-heading-option-svg {
+    fill: #ce892e;
+}
+
+.landing-page-contents-main-link, .landing-page-contents-main-link:visited {
+    color: #ffa736;
+    text-decoration: none;
+}
+
+.landing-page-contents-main-link:hover {
+    text-decoration: underline;
+}
+
+.landing-page-contents-main-contact-heading-option-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.landing-page-contents-main-contact-heading-option-svg {
+    fill: #ffa736;
+}
+
+.landing-page-contents-main-contact-heading-option-text {
+    margin-left: 0.5rem;   
+}
+
+.landing-page-contents-main-footer {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page-contents-main-footer-text {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.landing-page-contents-main-footer-email {
+    color: #ffa736;
+    font-weight: 550;
+}
+
+.landing-page-collaborations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;;
+    z-index: 2;
+}
+
+.landing-page-collaborations-image {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.landing-page-collaborations-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
