@@ -1,10 +1,12 @@
 {
   "name": "averent-app-landing",
+  "homepage": "https://github.com/Averent/landing-page.git",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "dotenv-webpack": "^8.1.0",
+    "gh-pages": "^6.2.0",
     "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -17,8 +19,7 @@
     "test": "test",
     "start": "webpack serve",
     "build": "webpack build",
-    "storybook": "start-storybook -p 6006 -c .storybook watch-css staticDirs ./src",
-    "build-storybook": "build-storybook"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
