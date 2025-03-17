@@ -166,7 +166,7 @@ function App() {
                         <span className="landing-page-contents-main-subtext">
                             ...to help creators promote, spread, and share their products. 
                         </span>
-                        <span className="landing-page-contents-main-subtext">This happens through ‘product pages’ and personalized user feeds that put their work in the eyes and hands of users, customers, and other consumers that will best resonate with them.</span>
+                        <span className="landing-page-contents-main-subtext">This happens through <span style={{ color: '#ffa736' }}>product pages</span> and <span style={{ color: '#ffa736' }}>personalized user feeds</span> that put their work in the eyes and hands of users, customers, and other consumers that will best resonate with them.</span>
                     </div>
                     <div className="landing-page-contents-main-section">
                         <span className="landing-page-contents-main-heading">Follow Our Progress!</span>
@@ -227,8 +227,17 @@ function App() {
                     </div>
                     <div className="landing-page-contents-main-section">
                         <div className="landing-page-contents-main-footer">
-                            <span className="landing-page-contents-main-footer-text">For professional/business inquiries, contact:</span>
-                            <a href="mailto:inquiries@averentapp.com" className="landing-page-contents-main-footer-email landing-page-contents-main-link">inquiries@averentapp.com</a>
+                            <div className="landing-page-contents-main-footer-item">
+                                <span className="landing-page-contents-main-footer-text">For professional/business inquiries, contact:</span>
+                                <a href="mailto:inquiries@averentapp.com" className="landing-page-contents-main-footer-email landing-page-contents-main-link">inquiries@averentapp.com</a>
+                            </div>
+                            <div className="landing-page-contents-main-footer-item">
+                                <span className="landing-page-contents-main-footer-text">Or reach out to us on:</span>
+                                <a href="https://www.linkedin.com/company/averent" target="_blank" className="landing-page-contents-main-footer-email landing-page-contents-main-link">LinkedIn</a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="https://pace.joinhandshake.com/e/1004501" target="_blank" className="landing-page-contents-main-footer-email landing-page-contents-main-link">Handshake</a>
+                                <span>&nbsp;(for Pace students and alumni)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -237,7 +246,7 @@ function App() {
                         In collaboration with:
                     </span>
                     <div className="landing-page-collaborations-image">
-                        <img draggable={false} width="250" src="./public/images/collaborations.png" />
+                        <img draggable={false} width="400" src="./public/images/collaborations.png" />
                     </div>
                 </div>
             </div>

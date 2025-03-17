@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Oxygen:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Comfortaa:wght@300..700&family=Oxygen:wght@300;400;700&display=swap');
 
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-30deg);
+    }
+    80% {
+        transform: rotate(390deg); /* Slightly more than 360 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* Correct back to 360 degrees */
+    }
+}
+
 html, body, #averent-landing {
     margin: 0;
     padding: 0;
@@ -130,11 +145,27 @@ html, body, #averent-landing {
 
 .landing-page-contents-main-horizontal-list-item {
     background-color: white;
-    background: linear-gradient(-45deg, white 80%, #ffa736 20%);
+    background: linear-gradient(-45deg, white 82%, #ffa736 18%);
     border-radius: 5px;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.landing-page-contents-main-horizontal-list-item:hover {
+    transform: scale(1.01);
+}
+
+.landing-page-contents-main-horizontal-list-item:hover .landing-page-contents-main-socials-logo {
+    animation: rotateLogo 1.5s linear;
+}
+
+.landing-page-contents-main-horizontal-list-item:hover .landing-page-contents-main-socials-link {
+    color: #ffa736;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 .landing-page-contents-main-subheading {
@@ -204,20 +235,24 @@ html, body, #averent-landing {
     font-size: 1.3rem;
     font-family: 'Russo One', sans-serif; 
     text-decoration: none;
-}
-
-.landing-page-contents-main-socials-link:hover {
-    text-decoration: underline;
-    color: #ffa736;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 .landing-page-contents-main-socials-image {
     width: 200px;
 }
 
-.landing-page-contents-main-footer {
+.landing-page-contents-main-footer, .landing-page-contents-main-footer-item {
     display: flex;
     align-items: center;
+}
+
+.landing-page-contents-main-footer {
+    flex-direction: column;
+}
+
+.landing-page-contents-main-footer-item:first-child {
+    margin-bottom: 0.5rem;
 }
 
 .landing-page-contents-main-footer-text {
