@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Comfortaa:wght@300..700&family=Oxygen:wght@300;400;700&display=swap');
 
 html, body, #averent-landing {
     margin: 0;
@@ -96,21 +98,43 @@ html, body, #averent-landing {
     margin: 1rem 0;
 }
 
-.landing-page-contents-main-heading {
+.landing-page-contents-main-heading, .landing-page-contents-main-heading-main {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 550;
     width: 100%;
 }
 
-.landing-page-contents-main-horizontal-list {
+.landing-page-contents-main-heading-main {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin: 0.5rem 00;
+}
+
+.landing-page-contents-main-horizontal-list, .landing-page-contents-main-horizontal-socials-list {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: inherit;
     flex-wrap: wrap;
-    row-gap: 5px;
+    row-gap: 0.5rem;
+}
+
+.landing-page-contents-main-horizontal-list {
+    width: inherit;
     margin: 0.5rem 0 1rem;
+}
+
+.landing-page-contents-main-horizontal-socials-list {
+    margin-top: 0.5rem;
+}
+
+.landing-page-contents-main-horizontal-list-item {
+    background-color: white;
+    background: linear-gradient(-45deg, white 80%, #ffa736 20%);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 .landing-page-contents-main-subheading {
@@ -121,8 +145,14 @@ html, body, #averent-landing {
     width: 150px;
 }
 
+.landing-page-contents-main-text, .landing-page-contents-main-subtext {
+    margin-top: 0.5rem; 
+}
+
 .landing-page-contents-main-text {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    font-family: "Antonio", sans-serif;
+    font-size: 2rem;
 }
 
 .landing-page-contents-main-contact-heading-option {
@@ -157,6 +187,32 @@ html, body, #averent-landing {
 
 .landing-page-contents-main-contact-heading-option-text {
     margin-left: 0.5rem;   
+}
+
+.landing-page-contents-main-socials-logo {
+    width: 75px;
+    margin-top: 0.5rem;
+}
+
+.landing-page-contents-main-socials-link-container {
+    margin: 0.5rem 0 0.75rem;
+}
+
+.landing-page-contents-main-socials-link {
+    color: black;
+    font-weight: 550;
+    font-size: 1.3rem;
+    font-family: 'Russo One', sans-serif; 
+    text-decoration: none;
+}
+
+.landing-page-contents-main-socials-link:hover {
+    text-decoration: underline;
+    color: #ffa736;
+}
+
+.landing-page-contents-main-socials-image {
+    width: 200px;
 }
 
 .landing-page-contents-main-footer {

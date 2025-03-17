@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './style.scss';
 
 function App() {
+    document.title = "Averent - Coming Soon!";
 
     function Slideshow() {
         const photos = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -23,11 +24,10 @@ function App() {
     
         return (
             <div className="landing-page-slideshow">
-                <img
+                <img draggable={false}
                     className={`landing-page-slideshow-image ${fade ? 'fade-in' : 'fade-out'}`}
-                    src={`/images/${currentPhoto}.png`}
+                    src={`./public/images/${currentPhoto}.png`}
                     alt="Slideshow"
-                    draggable={false}
                 />
             </div>
         );
@@ -152,81 +152,77 @@ function App() {
                         COMING SOON...
                     </div>
                     <div className="landing-page-contents-main-section">
-                        <span className="landing-page-contents-main-heading">A platform built by creators... For creators.</span>
-                        <span className="landing-page-contents-main-text">Averent is a company striving to help individual creators, entrepreneurs, and developers discover and be discovered by helping them form meaningful connections with their audiences.</span>
+                        <span className="landing-page-contents-main-heading-main">Want to <span style={{ color: '#ffa736' }}>promote</span> an app you made but don't know where to start?</span>
+                        <span className="landing-page-contents-main-heading-main">Want to <span style={{ color: '#ffa736' }}>find</span> unique digital content without scouring app stores?</span>
+                        <span className="landing-page-contents-main-text">JOIN <span style={{ color: '#ffa736' }}>AVERENT</span>, THE BRAND-NEW WAY TO FIND AND SHARE DIGITAL CREATIONS.</span>
                     </div>
                     <div className="landing-page-contents-main-section">
-                        <span className="landing-page-contents-main-heading">Combining Elements of:</span>
+                        <span className="landing-page-contents-main-heading">Our platform combines elements of:</span>
                         <div className="landing-page-contents-main-horizontal-list">
                             <span className="landing-page-contents-main-subheading">Social Media</span>
                             <span className="landing-page-contents-main-subheading">Entrepreneurship</span>
                             <span className="landing-page-contents-main-subheading">E-Commerce</span>
                         </div>
-                        <span className="landing-page-contents-main-text">
+                        <span className="landing-page-contents-main-subtext">
                             ...to help creators promote, spread, and share their products. 
                         </span>
-                        <span className="landing-page-contents-main-text">This happens through ‘product pages’ and personalized user feeds that put their work in the eyes and hands of users, customers, and other consumers that will best resonate with them.</span>
+                        <span className="landing-page-contents-main-subtext">This happens through ‘product pages’ and personalized user feeds that put their work in the eyes and hands of users, customers, and other consumers that will best resonate with them.</span>
                     </div>
                     <div className="landing-page-contents-main-section">
                         <span className="landing-page-contents-main-heading">Follow Our Progress!</span>
-                        <div className="landing-page-contents-main-horizontal-list">
-                            <a href="https://www.x.com/@averentapp" className="landing-page-contents-main-contact-heading-option landing-page-contents-main-link" target="_blank" rel="noreferrer">
-                                <div className="landing-page-contents-main-contact-heading-option-icon">   
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        className="landing-page-contents-main-contact-heading-option-svg"
-                                        enableBackground="new 0 0 24 24"
-                                        version="1.1"
-                                        viewBox="0 0 24 24"
-                                        xmlSpace="preserve"
-                                    >
-                                        <path d="M14.095 10.316L22.286 1h-1.94L13.23 9.088 7.551 1H1l8.59 12.231L1 23h1.94l7.51-8.543L16.45 23H23l-8.905-12.684zm-2.658 3.022l-.872-1.218L3.64 2.432h2.98l5.59 7.821.869 1.219 7.265 10.166h-2.982l-5.926-8.3z" />
-                                    </svg>
+                        <div className="landing-page-contents-main-horizontal-socials-list">
+                            <div className="landing-page-contents-main-horizontal-list-item">
+                                <div className="landing-page-contents-main-socials-logo-container">
+                                    <img draggable={false} className="landing-page-contents-main-socials-logo" src="./public/images/x-logo.png" />
                                 </div>
-                                <div className="landing-page-contents-main-contact-heading-option-text">
-                                    @AverentApp
+                                <div>
+                                    <div className="landing-page-contents-main-socials-link-container">
+                                        <a href="https://x.com/@averentapp" target="_blank" className="landing-page-contents-main-socials-link">
+                                            @averentapp
+                                        </a>
+                                    </div>
+                                    <img draggable={false} className="landing-page-contents-main-socials-image" src="./public/images/x-qr.png" />
                                 </div>
-                            </a>
-                            <a href="https://www.instagram.com/averentapp" className="landing-page-contents-main-contact-heading-option landing-page-contents-main-link" target="_blank" rel="noreferrer">
-                                <div className="landing-page-contents-main-contact-heading-option-icon">   
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        className="landing-page-contents-main-contact-heading-option-svg"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                        fillRule="evenodd"
-                                        d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12m0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
-                                        clipRule="evenodd"
-                                        ></path>
-                                        <path fill="#0F0F0F" d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2"></path>
-                                        <path
-                                        fillRule="evenodd"
-                                        d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622M13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3"
-                                        clipRule="evenodd"
-                                        ></path>
-                                    </svg>
+                            </div>  
+                            <div className="landing-page-contents-main-horizontal-list-item">
+                                <div className="landing-page-contents-main-socials-logo-container">
+                                    <img draggable={false} className="landing-page-contents-main-socials-logo" src="./public/images/instagram-logo.png" />
                                 </div>
-                                <div className="landing-page-contents-main-contact-heading-option-text">
-                                    /averentapp
+                                <div>
+                                    <div className="landing-page-contents-main-socials-link-container">
+                                        <a href="https://instagram.com/averentapp" target="_blank" className="landing-page-contents-main-socials-link">
+                                            /averentapp
+                                        </a>
+                                    </div>
+                                    <img draggable={false} className="landing-page-contents-main-socials-image" src="./public/images/instagram-qr.png" />
                                 </div>
-                            </a>
-                            <a href="https://discord.gg/averent" className="landing-page-contents-main-contact-heading-option landing-page-contents-main-link" target="_blank" rel="noreferrer">
-                                <div className="landing-page-contents-main-contact-heading-option-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" width="20" height="20" className="landing-page-contents-main-contact-heading-option-svg">
-                                        <path
-                                            d="M107.7 8.07A105.15 105.15 0 0081.47 0a72.06 72.06 0 00-3.36 6.83 97.68 97.68 0 00-29.11 0A72.37 72.37 0 0045.64 0a105.89 105.89 0 00-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0032.17 16.15 77.7 77.7 0 006.89-11.11 68.42 68.42 0 01-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0064.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 01-10.87 5.19 77 77 0 006.89 11.1 105.25 105.25 0 0032.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15zM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69z"
-                                        />
-                                    </svg>
+                            </div>  
+                            <div className="landing-page-contents-main-horizontal-list-item">
+                                <div className="landing-page-contents-main-socials-logo-container">
+                                    <img draggable={false} className="landing-page-contents-main-socials-logo" src="./public/images/tiktok-logo.png" />
                                 </div>
-                                <div className="landing-page-contents-main-contact-heading-option-text">
-                                    discord.gg/averent
+                                <div>
+                                    <div className="landing-page-contents-main-socials-link-container">
+                                        <a href="https://tiktok.com/@averent" target="_blank" className="landing-page-contents-main-socials-link">
+                                            @averent
+                                        </a>
+                                    </div>
+                                    <img draggable={false} className="landing-page-contents-main-socials-image" src="./public/images/tiktok-qr.png" />
                                 </div>
-                            </a>
+                            </div>  
+                            <div className="landing-page-contents-main-horizontal-list-item">
+                                <div className="landing-page-contents-main-socials-logo-container">
+                                    <img draggable={false} className="landing-page-contents-main-socials-logo" src="./public/images/discord-logo.png" />
+                                </div>
+                                <div>
+                                    <div className="landing-page-contents-main-socials-link-container">
+                                        <a href="https://discord.com/invite/ZxG5Q8AgfY" target="_blank" className="landing-page-contents-main-socials-link">
+                                            Averent
+                                        </a>
+                                    </div>
+                                    <img draggable={false} className="landing-page-contents-main-socials-image" src="./public/images/discord-qr.png" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="landing-page-contents-main-section">
@@ -241,7 +237,7 @@ function App() {
                         In collaboration with:
                     </span>
                     <div className="landing-page-collaborations-image">
-                        <img draggable={false} width="250" src="/images/collaborations.png" />
+                        <img draggable={false} width="250" src="./public/images/collaborations.png" />
                     </div>
                 </div>
             </div>
